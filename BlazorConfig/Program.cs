@@ -1,15 +1,19 @@
+using BlazorConfig.Api;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using RestSharp;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
+builder.Services.AddHttpClient();
 builder.Services.AddServerSideBlazor();
-
 builder.Services.AddLogging(loggingBuilder => loggingBuilder
     .AddConsole()
     .SetMinimumLevel(LogLevel.Debug)
 );
+builder.Services.AddTransient<RestClient>();
+builder.Services.AddTransient<ApiClient>();
 
 
 var app = builder.Build();

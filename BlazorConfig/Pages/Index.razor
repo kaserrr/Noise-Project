@@ -18,6 +18,16 @@
             <button class="bg-gradient-to-r from-sky-500 via-indigo-500 to-purple-500 p-1 text-white w-64" @onclick="AttemptLogin">Login</button>
         </div>
 
+        <ul>
+            @foreach (var model in _Models)
+            {
+                    @foreach (var frmPayload in model)
+                    {
+                        <li>@frmPayload.bytes</li>
+                    }
+            }
+        </ul>
+
         @if (loginFailed)
         {
             <p class="text-red-600 w-64">Login failed.</p>

@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using ASP.NET_API.Models; // Make sure you import the Models namespace
-using static ASP.NET_API.Models.Models;
+using static Noise.Contracts.Models;
 
 [ApiController]
 [Route("api/uplink")]

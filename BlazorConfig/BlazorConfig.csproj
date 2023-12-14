@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.4" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
   </ItemGroup>
 
@@ -25,6 +26,10 @@
 
 	<ItemGroup>
 	  <Folder Include="Files\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Noise.Contracts\Noise.Contracts.csproj" />
 	</ItemGroup>
 
 </Project>

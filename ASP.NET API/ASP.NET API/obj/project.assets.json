@@ -101,6 +101,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Noise.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Noise.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Noise.Contracts.dll": {}
+        }
       }
     }
   },
@@ -472,11 +482,17 @@
         "swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Noise.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../../Noise.Contracts/Noise.Contracts.csproj",
+      "msbuildProject": "../../Noise.Contracts/Noise.Contracts.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Newtonsoft.Json >= 13.0.3",
+      "Noise.Contracts >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -506,7 +522,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\kaser\\source\\repos\\Noise_project\\Noise.Contracts\\Noise.Contracts.csproj": {
+              "projectPath": "C:\\Users\\kaser\\source\\repos\\Noise_project\\Noise.Contracts\\Noise.Contracts.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -547,7 +567,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
